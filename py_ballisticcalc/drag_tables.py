@@ -760,11 +760,66 @@ TableRA4: List[DragTablePointDictType] = [
     {'Mach': 3.9, 'CD': 0.4977},
     {'Mach': 4.0, 'CD': 0.4969},
 ]
-
+TableGL: List[DragTablePointDictType] = [
+    {'Mach': 0.00, 'CD': 1.50},   # Static placeholder (no physical meaning)
+    {'Mach': 0.05, 'CD': 1.48},   # Very low speed, high drag
+    {'Mach': 0.10, 'CD': 1.45},   # Tumbling begins
+    {'Mach': 0.15, 'CD': 1.40},
+    {'Mach': 0.20, 'CD': 1.35},   # Typical flight speed (~68 m/s)
+    {'Mach': 0.25, 'CD': 1.30},
+    {'Mach': 0.30, 'CD': 1.25},   #~110 m/s (Mach 0.32)
+    {'Mach': 0.35, 'CD': 1.20},
+    {'Mach': 0.40, 'CD': 1.15},
+    {'Mach': 0.45, 'CD': 1.10},
+    {'Mach': 0.50, 'CD': 1.05},   # Faster than typical LV grenades
+    {'Mach': 0.55, 'CD': 1.00},
+    {'Mach': 0.60, 'CD': 1.05},   # Drag increases due to instability
+    {'Mach': 0.70, 'CD': 1.20},
+    {'Mach': 0.725, 'CD': 1.25},
+    {'Mach': 0.75, 'CD': 1.30},   # Transonic effects (unlikely for LV)
+    {'Mach': 0.775, 'CD': 1.40},
+    {'Mach': 0.80, 'CD': 1.50},
+    {'Mach': 0.825, 'CD': 1.60},
+    {'Mach': 0.85, 'CD': 1.70},
+    {'Mach': 0.875, 'CD': 1.80},
+    {'Mach': 0.90, 'CD': 1.90},
+    {'Mach': 0.925, 'CD': 2.00},
+    {'Mach': 0.95, 'CD': 2.10},
+    {'Mach': 0.975, 'CD': 2.20},
+    {'Mach': 1.0, 'CD': 2.30},    # Supersonic (hypothetical)
+    {'Mach': 1.025, 'CD': 2.20},
+    {'Mach': 1.05, 'CD': 2.10},
+    {'Mach': 1.075, 'CD': 2.00},
+    {'Mach': 1.10, 'CD': 1.90},
+    {'Mach': 1.125, 'CD': 1.80},
+    {'Mach': 1.15, 'CD': 1.70},
+    {'Mach': 1.20, 'CD': 1.60},
+    {'Mach': 1.25, 'CD': 1.50},
+    {'Mach': 1.30, 'CD': 1.40},
+    {'Mach': 1.35, 'CD': 1.30},
+    {'Mach': 1.40, 'CD': 1.20},
+    {'Mach': 1.45, 'CD': 1.10},
+    {'Mach': 1.50, 'CD': 1.00},
+    {'Mach': 1.55, 'CD': 0.95},
+    {'Mach': 1.60, 'CD': 0.90},
+    {'Mach': 1.65, 'CD': 0.85},
+    {'Mach': 1.70, 'CD': 0.80},
+    {'Mach': 1.75, 'CD': 0.75},
+    {'Mach': 1.80, 'CD': 0.70},
+    {'Mach': 1.85, 'CD': 0.65},
+    {'Mach': 1.90, 'CD': 0.60},
+    {'Mach': 1.95, 'CD': 0.55},
+    {'Mach': 2.00, 'CD': 0.50},
+    # Supersonic stabilization (not relevant for LV grenades)
+    {'Mach': 2.50, 'CD': 0.40},
+    {'Mach': 3.00, 'CD': 0.35},
+    {'Mach': 4.00, 'CD': 0.30},
+    {'Mach': 5.00, 'CD': 0.25},
+]
 
 def get_drag_tables_names():
     """Return a list of drag table names"""
-    return [f"TableG{n}" for n in (1, 7, 2, 5, 6, 8, 'I', 'S', 'RA4')]
+    return [f"TableG{n}" for n in (1, 7, 2, 5, 6, 8, 'I', 'S', 'RA4','GL')]
 
 
 __all__ = ['get_drag_tables_names', 'DragTablePointDictType']
@@ -777,5 +832,6 @@ __all__ += [
     'TableG8',
     'TableGI',
     'TableGS',
-    'TableRA4'
+    'TableRA4',
+    'TableGL'
 ]
