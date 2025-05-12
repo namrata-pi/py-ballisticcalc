@@ -819,7 +819,7 @@ TableGL: List[DragTablePointDictType] = [
 
 def get_drag_tables_names():
     """Return a list of drag table names"""
-    return [f"TableG{n}" for n in (1, 7, 2, 5, 6, 8, 'I', 'S', 'RA4','GL')]
+    return [f"TableG{n}" for n in (1, 7, 2, 5, 6, 8, 'I', 'S', 'RA4','L')]
 
 
 __all__ = ['get_drag_tables_names', 'DragTablePointDictType']
