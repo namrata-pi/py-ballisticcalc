@@ -761,22 +761,23 @@ TableRA4: List[DragTablePointDictType] = [
     {'Mach': 4.0, 'CD': 0.4969},
 ]
 TableGL: List[DragTablePointDictType] = [
-    {'Mach': 0.00, 'CD': 1.50},   # Static placeholder (no physical meaning)
-    {'Mach': 0.05, 'CD': 1.48},   # Very low speed, high drag
-    {'Mach': 0.10, 'CD': 1.45},   # Tumbling begins
-    {'Mach': 0.15, 'CD': 1.40},
-    {'Mach': 0.20, 'CD': 1.35},   # Typical flight speed (~68 m/s)
-    {'Mach': 0.25, 'CD': 1.30},
-    {'Mach': 0.30, 'CD': 1.25},   #~110 m/s (Mach 0.32)
-    {'Mach': 0.35, 'CD': 1.20},
-    {'Mach': 0.40, 'CD': 1.15},
-    {'Mach': 0.45, 'CD': 1.10},
-    {'Mach': 0.50, 'CD': 1.05},   # Faster than typical LV grenades
-    {'Mach': 0.55, 'CD': 1.00},
-    {'Mach': 0.60, 'CD': 1.05},   # Drag increases due to instability
+    [
+    {'Mach': 0.00, 'CD': 1.50},   # No physical meaning, unchanged
+    {'Mach': 0.05, 'CD': 1.48},
+    {'Mach': 0.10, 'CD': 1.45},
+    {'Mach': 0.15, 'CD': 1.42},   # Slight bump
+    {'Mach': 0.20, 'CD': 1.38},   # +0.03
+    {'Mach': 0.25, 'CD': 1.34},   # +0.04
+    {'Mach': 0.30, 'CD': 1.30},   # +0.05 (main velocity ~110 m/s)
+    {'Mach': 0.35, 'CD': 1.27},   # +0.07
+    {'Mach': 0.40, 'CD': 1.22},   # +0.07
+    {'Mach': 0.45, 'CD': 1.18},   # +0.08
+    {'Mach': 0.50, 'CD': 1.13},   # +0.08
+    {'Mach': 0.55, 'CD': 1.10},   # +0.10
+    {'Mach': 0.60, 'CD': 1.15},   # +0.10
     {'Mach': 0.70, 'CD': 1.20},
     {'Mach': 0.725, 'CD': 1.25},
-    {'Mach': 0.75, 'CD': 1.30},   # Transonic effects (unlikely for LV)
+    {'Mach': 0.75, 'CD': 1.30},
     {'Mach': 0.775, 'CD': 1.40},
     {'Mach': 0.80, 'CD': 1.50},
     {'Mach': 0.825, 'CD': 1.60},
@@ -786,7 +787,7 @@ TableGL: List[DragTablePointDictType] = [
     {'Mach': 0.925, 'CD': 2.00},
     {'Mach': 0.95, 'CD': 2.10},
     {'Mach': 0.975, 'CD': 2.20},
-    {'Mach': 1.0, 'CD': 2.30},    # Supersonic (hypothetical)
+    {'Mach': 1.0, 'CD': 2.30},
     {'Mach': 1.025, 'CD': 2.20},
     {'Mach': 1.05, 'CD': 2.10},
     {'Mach': 1.075, 'CD': 2.00},
@@ -810,7 +811,6 @@ TableGL: List[DragTablePointDictType] = [
     {'Mach': 1.90, 'CD': 0.60},
     {'Mach': 1.95, 'CD': 0.55},
     {'Mach': 2.00, 'CD': 0.50},
-    # Supersonic stabilization (not relevant for LV grenades)
     {'Mach': 2.50, 'CD': 0.40},
     {'Mach': 3.00, 'CD': 0.35},
     {'Mach': 4.00, 'CD': 0.30},
