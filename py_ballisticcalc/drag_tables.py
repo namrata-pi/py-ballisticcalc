@@ -761,63 +761,56 @@ TableRA4: List[DragTablePointDictType] = [
     {'Mach': 4.0, 'CD': 0.4969},
 ]
 TableGL: List[DragTablePointDictType] = 
-  drag_table = [
-    # Subsonic Region (Key adjustments here)
-    {'Mach': 0.00, 'CD': 1.55},   # Static drag (increased from 1.50)
-{'Mach': 0.05, 'CD': 1.52},   # Low-speed drag bump  
-{'Mach': 0.10, 'CD': 1.48},   # Tumbling phase  
-{'Mach': 0.15, 'CD': 1.43},   # Early deceleration  
-{'Mach': 0.20, 'CD': 1.38},   # KEY: Adjusted for 4° angle (was 1.35)  
-{'Mach': 0.25, 'CD': 1.33},   # Slightly higher than original  
-{'Mach': 0.30, 'CD': 1.28},   # Critical for 110 m/s (Mach ~0.32)  
-{'Mach': 0.35, 'CD': 1.23},   # Continued drag increase     # Increased from 1.20
-    {'Mach': 0.40, 'CD': 1.18},   # Increased from 1.15
-    {'Mach': 0.45, 'CD': 1.13},   # Increased from 1.10
-    {'Mach': 0.50, 'CD': 1.08},   # Increased from 1.05
-    {'Mach': 0.55, 'CD': 1.03},   # Increased from 1.00
-    
-    # Transonic Region (Minor tweaks)
-    {'Mach': 0.60, 'CD': 1.08},  # Increased from 1.05 (drag rise starts earlier)
-    {'Mach': 0.70, 'CD': 1.23},  # Increased from 1.20
-    {'Mach': 0.725, 'CD': 1.28}, # Increased from 1.25
-    {'Mach': 0.75, 'CD': 1.33},  # Increased from 1.30
-    {'Mach': 0.775, 'CD': 1.43}, # Increased from 1.40
-    {'Mach': 0.80, 'CD': 1.53},  # Increased from 1.50
-    {'Mach': 0.825, 'CD': 1.63}, # Increased from 1.60
-    {'Mach': 0.85, 'CD': 1.73},  # Increased from 1.70
-    {'Mach': 0.875, 'CD': 1.83}, # Increased from 1.80
-    {'Mach': 0.90, 'CD': 1.93},  # Increased from 1.90
-    {'Mach': 0.925, 'CD': 2.03}, # Increased from 2.00
-    {'Mach': 0.95, 'CD': 2.13},  # Increased from 2.10
-    {'Mach': 0.975, 'CD': 2.23}, # Increased from 2.20
-    
-    # Supersonic Region (Minimal changes)
-    {'Mach': 1.0, 'CD': 2.33},   # Increased from 2.30
-    {'Mach': 1.025, 'CD': 2.23},  # Increased from 2.20
-    {'Mach': 1.05, 'CD': 2.13},   # Increased from 2.10
-    {'Mach': 1.075, 'CD': 2.03},  # Increased from 2.00
-    {'Mach': 1.10, 'CD': 1.93},   # Increased from 1.90
-    {'Mach': 1.125, 'CD': 1.83},  # Increased from 1.80
-    {'Mach': 1.15, 'CD': 1.73},   # Increased from 1.70
-    {'Mach': 1.20, 'CD': 1.63},   # Increased from 1.60
-    {'Mach': 1.25, 'CD': 1.53},   # Increased from 1.50
-    {'Mach': 1.30, 'CD': 1.43},   # Increased from 1.40
-    {'Mach': 1.35, 'CD': 1.33},   # Increased from 1.30
-    {'Mach': 1.40, 'CD': 1.23},   # Increased from 1.20
-    {'Mach': 1.45, 'CD': 1.13},   # Increased from 1.10
-    {'Mach': 1.50, 'CD': 1.03},   # Increased from 1.00
-    {'Mach': 1.55, 'CD': 0.98},   # Increased from 0.95
-    {'Mach': 1.60, 'CD': 0.93},   # Increased from 0.90
-    {'Mach': 1.65, 'CD': 0.88},   # Increased from 0.85
-    {'Mach': 1.70, 'CD': 0.83},   # Increased from 0.80
-    {'Mach': 1.75, 'CD': 0.78},   # Increased from 0.75
-    {'Mach': 1.80, 'CD': 0.73},   # Increased from 0.70
-    {'Mach': 1.85, 'CD': 0.68},   # Increased from 0.65
-    {'Mach': 1.90, 'CD': 0.63},   # Increased from 0.60
-    {'Mach': 1.95, 'CD': 0.58},   # Increased from 0.55
-    {'Mach': 2.00, 'CD': 0.53},   # Increased from 0.50
-    
-    # High Supersonic (No changes needed)
+  [
+    {'Mach': 0.00, 'CD': 1.55},
+    {'Mach': 0.05, 'CD': 1.52},
+    {'Mach': 0.10, 'CD': 1.48},
+    {'Mach': 0.15, 'CD': 1.43},
+    {'Mach': 0.20, 'CD': 1.38},  # Critical for 110 m/s
+    {'Mach': 0.25, 'CD': 1.33},
+    {'Mach': 0.30, 'CD': 1.28},  # Mach 0.32 = 110 m/s
+    {'Mach': 0.35, 'CD': 1.23},
+    {'Mach': 0.40, 'CD': 1.18},
+    {'Mach': 0.45, 'CD': 1.13},
+    {'Mach': 0.50, 'CD': 1.08},
+    {'Mach': 0.55, 'CD': 1.03},
+    {'Mach': 0.60, 'CD': 1.08},
+    {'Mach': 0.70, 'CD': 1.23},
+    {'Mach': 0.725, 'CD': 1.28},
+    {'Mach': 0.75, 'CD': 1.33},
+    {'Mach': 0.775, 'CD': 1.43},
+    {'Mach': 0.80, 'CD': 1.53},
+    {'Mach': 0.825, 'CD': 1.63},
+    {'Mach': 0.85, 'CD': 1.73},
+    {'Mach': 0.875, 'CD': 1.83},
+    {'Mach': 0.90, 'CD': 1.93},
+    {'Mach': 0.925, 'CD': 2.03},
+    {'Mach': 0.95, 'CD': 2.13},
+    {'Mach': 0.975, 'CD': 2.23},
+    {'Mach': 1.0, 'CD': 2.33},
+    {'Mach': 1.025, 'CD': 2.23},
+    {'Mach': 1.05, 'CD': 2.13},
+    {'Mach': 1.075, 'CD': 2.03},
+    {'Mach': 1.10, 'CD': 1.93},
+    {'Mach': 1.125, 'CD': 1.83},
+    {'Mach': 1.15, 'CD': 1.73},
+    {'Mach': 1.20, 'CD': 1.63},
+    {'Mach': 1.25, 'CD': 1.53},
+    {'Mach': 1.30, 'CD': 1.43},
+    {'Mach': 1.35, 'CD': 1.33},
+    {'Mach': 1.40, 'CD': 1.23},
+    {'Mach': 1.45, 'CD': 1.13},
+    {'Mach': 1.50, 'CD': 1.03},
+    {'Mach': 1.55, 'CD': 0.98},
+    {'Mach': 1.60, 'CD': 0.93},
+    {'Mach': 1.65, 'CD': 0.88},
+    {'Mach': 1.70, 'CD': 0.83},
+    {'Mach': 1.75, 'CD': 0.78},
+    {'Mach': 1.80, 'CD': 0.73},
+    {'Mach': 1.85, 'CD': 0.68},
+    {'Mach': 1.90, 'CD': 0.63},
+    {'Mach': 1.95, 'CD': 0.58},
+    {'Mach': 2.00, 'CD': 0.53},
     {'Mach': 2.50, 'CD': 0.40},
     {'Mach': 3.00, 'CD': 0.35},
     {'Mach': 4.00, 'CD': 0.30},
