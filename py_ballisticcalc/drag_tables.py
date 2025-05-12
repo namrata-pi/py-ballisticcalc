@@ -767,9 +767,9 @@ TableGL: List[DragTablePointDictType] =
     {'Mach': 0.05, 'CD': 1.52},   # Increased from 1.48
     {'Mach': 0.10, 'CD': 1.48},   # Increased from 1.45
     {'Mach': 0.15, 'CD': 1.43},   # Increased from 1.40
-    {'Mach': 0.20, 'CD': 1.38},   # Increased from 1.35 (critical for 110 m/s)
-    {'Mach': 0.25, 'CD': 1.33},   # Increased from 1.30
-    {'Mach': 0.30, 'CD': 1.28},   # Increased from 1.25 (Mach 0.32 = 110 m/s)
+    {'Mach': 0.20, 'CD': 1.40},   # Increased from 1.35 (critical for 110 m/s)
+    {'Mach': 0.25, 'CD': 1.38},   # Increased from 1.30
+    {'Mach': 0.30, 'CD': 1.35},   # Increased from 1.25 (Mach 0.32 = 110 m/s)
     {'Mach': 0.35, 'CD': 1.23},   # Increased from 1.20
     {'Mach': 0.40, 'CD': 1.18},   # Increased from 1.15
     {'Mach': 0.45, 'CD': 1.13},   # Increased from 1.10
