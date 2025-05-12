@@ -763,14 +763,14 @@ TableRA4: List[DragTablePointDictType] = [
 TableGL: List[DragTablePointDictType] = 
   drag_table = [
     # Subsonic Region (Key adjustments here)
-    {'Mach': 0.00, 'CD': 1.55},   # Increased from 1.50 (static drag)
-    {'Mach': 0.05, 'CD': 1.52},   # Increased from 1.48
-    {'Mach': 0.10, 'CD': 1.48},   # Increased from 1.45
-    {'Mach': 0.15, 'CD': 1.43},   # Increased from 1.40
-    {'Mach': 0.20, 'CD': 1.40},   # Increased from 1.35 (critical for 110 m/s)
-    {'Mach': 0.25, 'CD': 1.38},   # Increased from 1.30
-    {'Mach': 0.30, 'CD': 1.35},   # Increased from 1.25 (Mach 0.32 = 110 m/s)
-    {'Mach': 0.35, 'CD': 1.23},   # Increased from 1.20
+    {'Mach': 0.00, 'CD': 1.55},   # Static drag (increased from 1.50)
+{'Mach': 0.05, 'CD': 1.52},   # Low-speed drag bump  
+{'Mach': 0.10, 'CD': 1.48},   # Tumbling phase  
+{'Mach': 0.15, 'CD': 1.43},   # Early deceleration  
+{'Mach': 0.20, 'CD': 1.38},   # KEY: Adjusted for 4° angle (was 1.35)  
+{'Mach': 0.25, 'CD': 1.33},   # Slightly higher than original  
+{'Mach': 0.30, 'CD': 1.28},   # Critical for 110 m/s (Mach ~0.32)  
+{'Mach': 0.35, 'CD': 1.23},   # Continued drag increase     # Increased from 1.20
     {'Mach': 0.40, 'CD': 1.18},   # Increased from 1.15
     {'Mach': 0.45, 'CD': 1.13},   # Increased from 1.10
     {'Mach': 0.50, 'CD': 1.08},   # Increased from 1.05
